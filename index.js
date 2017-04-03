@@ -1,5 +1,8 @@
-import { connect } from 'react-redux';
-import get from 'lodash.get';
+const connect = require('react-redux').connect;
+const get = require('lodash.get');
+
+const affix = wrapConnect(connect);
+affix.wrapConnect = wrapConnect;
 
 // connect('*')
 function identity(value) {
@@ -62,8 +65,7 @@ function wrapMapDispatchToProps(mapDispatchToProps) {
   return mapDispatchToProps;
 }
 
-// for testing
-export function wrapConnect(connect) {
+function wrapConnect(connect) {
   return function affix(mapStateToProps, mapDispatchToProps, mergeProps, options) {
     return connect(
       wrapMapStateToProps(mapStateToProps),
@@ -73,5 +75,3 @@ export function wrapConnect(connect) {
     );
   }
 }
-
-export default wrapConnect(connect);
