@@ -4,6 +4,8 @@ const get = require('lodash.get');
 const affix = wrapConnect(connect);
 affix.wrapConnect = wrapConnect;
 
+module.exports = affix;
+
 // connect('*')
 function identity(value) {
   return value;
