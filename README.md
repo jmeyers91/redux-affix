@@ -6,7 +6,7 @@ A react-redux's connect function with additional shorthand syntax.
 
 `affix` behaves exactly like React-Redux's `connect` function when `mapStateToProps` and `mapDispatchToProps` are functions.
 
-Pass single state key as `mapStateToProps`
+### Pass single state key as `mapStateToProps`
 
 ```javascript
 affix('todos')
@@ -18,7 +18,7 @@ With `connect`:
 connect(({todos}) => ({todos}))
 ```
 
-Pass state keys as `mapStateToProps`
+### Pass state keys as `mapStateToProps`
 
 ```javascript
 affix(['todos', 'user'])
@@ -30,7 +30,7 @@ With `connect`:
 connect(({todos, user}) => ({todos, user}))
 ```
 
-Pass state paths as `mapStateToProps`
+### Pass state paths as `mapStateToProps`
 
 ```javascript
 affix({username: 'user.name', todoCount: 'todos.length'})
@@ -45,7 +45,7 @@ connect(({todos, user}) => ({
 }))
 ```
 
-Pass action creators as `mapDispatchToProps`
+### Pass action creators as `mapDispatchToProps`
 
 ```javascript
 affix(mapStateToProps, {onToggleTask: toggleTask})

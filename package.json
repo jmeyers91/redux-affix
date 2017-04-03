@@ -1,6 +1,6 @@
 {
   "name": "redux-affix",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A react-redux's connect function with additional shorthand syntax.",
   "main": "dist/redux-affix.js",
   "scripts": {
