@@ -30,11 +30,11 @@ function mapStateToPropsFromMap(map) {
 // connect(mapStateToProps, {someProp: someActionCreator})
 function mapDispatchToPropsFromMap(map) {
   const propNames = Object.keys(map);
-  return function mapDispatchToProps(dispatch, ownProps) {
+  return function mapDispatchToProps(dispatch) {
     return propNames.reduce((props, propName) => {
       const actionCreator = map[propName];
       props[propName] = function(...args) {
-        dispatch(actionCreator(...args, ownProps));
+        return dispatch(actionCreator(...args));
       };
       return props;
     }, {});
