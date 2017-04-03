@@ -1,8 +1,8 @@
 {
   "name": "redux-affix",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A react-redux's connect function with additional shorthand syntax.",
-  "main": "dist/redux-affix.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d dist"
